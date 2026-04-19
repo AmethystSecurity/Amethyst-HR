@@ -4,7 +4,7 @@ import { forwardRef, ButtonHTMLAttributes } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onAnimationStart'> {
   variant?: 'primary' | 'secondary' | 'ghost' | 'danger'
   size?: 'sm' | 'md' | 'lg'
   isLoading?: boolean
@@ -13,27 +13,27 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', isLoading, children, disabled, ...props }, ref) => {
     const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-300 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed'
-    
+
     const variants = {
       primary: 'gradient-amethyst text-white hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] shadow-glow-sm',
       secondary: 'bg-transparent border border-white/15 text-text-primary hover:bg-white/5 hover:border-amethyst/50',
       ghost: 'bg-transparent text-text-secondary hover:text-text-primary hover:bg-white/5',
       danger: 'bg-error/10 text-error border border-error/30 hover:bg-error/20',
     }
-    
+
     const sizes = {
       sm: 'px-4 py-2 text-sm',
       md: 'px-6 py-3 text-base',
       lg: 'px-8 py-4 text-lg',
     }
-    
+
     return (
       <motion.button
         ref={ref}
         whileTap={{ scale: disabled || isLoading ? 1 : 0.98 }}
         className={cn(baseStyles, variants[variant], sizes[size], className)}
         disabled={disabled || isLoading}
-        {...props}
+        {...props as any}
       >
         {isLoading ? (
           <svg className="animate-spin -ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

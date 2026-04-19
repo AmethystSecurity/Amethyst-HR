@@ -173,7 +173,7 @@ export default function PlaceholderDashboard() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-text-secondary text-lg max-w-md mx-auto"
         >
-          We're building something amazing for you. Stay tuned for the full Amethyst experience — where cutting-edge cybersecurity meets innovative web development.
+          We&apos;re building something amazing for you. Stay tuned for the full Amethyst experience — where cutting-edge cybersecurity meets innovative web development.
         </motion.p>
 
         {/* Decorative glow effect */}

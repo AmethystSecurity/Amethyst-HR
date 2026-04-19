@@ -138,10 +138,10 @@ export default function ContactPage() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-heading mb-6">
               Contact <span className="text-gradient">Us</span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Have a question or need a quote? We'd love to hear from you. 
-              Our team is ready to help with any inquiry.
-            </p>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Have a question or need a quote? We&apos;d love to hear from you. 
+                Our team is ready to help with any inquiry.
+              </p>
           </motion.div>
 
           {/* Contact Options */}
@@ -201,7 +201,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
                     <p className="text-gray-400 mb-6">
-                      Thank you for reaching out. We'll get back to you within 24 hours.
+                      Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}

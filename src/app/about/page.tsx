@@ -247,7 +247,7 @@ export default function AboutPage() {
               <p className="text-lg text-gray-400">
                 We envision a world where every business, regardless of size, has access to 
                 enterprise-grade security and cutting-edge web technologies. At Amethyst, 
-                we're making this vision a reality, one client at a time.
+                 we&apos;re making this vision a reality, one client at a time.
               </p>
             </motion.div>
           </div>
@@ -358,9 +358,9 @@ export default function AboutPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white font-heading mb-4">
               Meet Our <span className="text-gradient">Team</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              The talented people behind Amethyst's success
-            </p>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                The talented people behind Amethyst&apos;s success
+              </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -453,7 +453,7 @@ export default function AboutPage() {
                 Join Our Journey
               </h2>
               <p className="text-xl text-gray-400 mb-8 max-w-xl mx-auto">
-                Let's work together to secure and elevate your business.
+                Let&apos;s work together to secure and elevate your business.
               </p>
               <Link 
                 href="/login" 

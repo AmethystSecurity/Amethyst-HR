@@ -157,9 +157,9 @@ export default function EmployeeDashboard() {
           <h1 className="text-2xl font-bold text-white">
             Welcome back, {firstName}!
           </h1>
-          <p className="text-gray-400 mt-1">
-            Here's your attendance overview for today
-          </p>
+           <p className="text-gray-400 mt-1">
+             Here&apos;s your attendance overview for today
+           </p>
         </div>
       </motion.div>
 
@@ -305,7 +305,7 @@ export default function EmployeeDashboard() {
           >
             <Card>
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-white">This Week's Attendance</h3>
+                <h3 className="text-lg font-semibold text-white">This Week&apos;s Attendance</h3>
                 <button className="text-[#9966CC] text-sm hover:text-[#7b4bb3] transition-colors flex items-center gap-1">
                   View All <ChevronRight size={16} />
                 </button>

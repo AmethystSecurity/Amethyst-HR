@@ -153,7 +153,7 @@ export default function AttendancePage() {
             className="lg:col-span-2"
           >
             <Card className="h-full">
-              <h3 className="text-lg font-semibold text-text-primary mb-4">Today's Overview</h3>
+              <h3 className="text-lg font-semibold text-text-primary mb-4">Today&apos;s Overview</h3>
               <div className="grid grid-cols-4 gap-4">
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center">

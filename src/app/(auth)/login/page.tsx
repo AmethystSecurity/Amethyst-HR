@@ -49,18 +49,18 @@ export default function LoginPage() {
     }
   }, [isAuthenticated, router])
 
-  // Clear any stale auth state on mount
-  useEffect(() => {
-    const checkAuth = async () => {
-      // Check if there's a valid session
-      const isAdmin = document.cookie.includes('isAdmin=true')
-      if (!isAdmin && isAuthenticated) {
-        // Stale auth state, clear it
-        logout()
-      }
-    }
-    checkAuth()
-  }, [])
+   // Clear any stale auth state on mount
+   useEffect(() => {
+     const checkAuth = async () => {
+       // Check if there's a valid session
+       const isAdmin = document.cookie.includes('isAdmin=true')
+       if (!isAdmin && isAuthenticated) {
+         // Stale auth state, clear it
+         logout()
+       }
+     }
+     checkAuth()
+   }, [isAuthenticated, logout])
 
   const toggleLamp = () => {
     setIsOn(prev => {
@@ -419,12 +419,12 @@ export default function LoginPage() {
             </div>
           </form>
 
-          <p className="text-center mt-6 text-gray-400">
-            Don't have an account?{' '}
-            <a href="/signup" className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
-              Sign up
-            </a>
-          </p>
+           <p className="text-center mt-6 text-gray-400">
+             Don&apos;t have an account?{' '}
+             <a href="/signup" className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
+               Sign up
+             </a>
+           </p>
         </div>
       </motion.div>
 

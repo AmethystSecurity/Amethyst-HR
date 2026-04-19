@@ -21,10 +21,10 @@ const mockPerformanceData = [
 ]
 
 const ratingColors = {
-  excellent: 'text-success bg-success/10',
-  good: 'text-amethyst bg-amethyst/10',
-  average: 'text-warning bg-warning/10',
-  poor: 'text-error bg-error/10',
+  excellent: { bg: 'bg-success/10', text: 'text-success' },
+  good: { bg: 'bg-amethyst/10', text: 'text-amethyst' },
+  average: { bg: 'bg-warning/10', text: 'text-warning' },
+  poor: { bg: 'bg-error/10', text: 'text-error' },
 }
 
 const getRatingCategory = (rating: number) => {
@@ -195,7 +195,7 @@ export default function PerformancePage() {
                         </td>
                         <td className="py-4 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className={cn('px-3 py-1 rounded-full text-xs font-medium', selfCategory.bg, selfCategory)}>
+                            <span className={cn('px-3 py-1 rounded-full text-xs font-medium', selfCategory.bg, selfCategory.text)}>
                               {employee.selfRating.toFixed(1)}
                             </span>
                             <div className="flex">
@@ -211,7 +211,7 @@ export default function PerformancePage() {
                         </td>
                         <td className="py-4 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className={cn('px-3 py-1 rounded-full text-xs font-medium', managerCategory.bg, managerCategory)}>
+                            <span className={cn('px-3 py-1 rounded-full text-xs font-medium', managerCategory.bg, managerCategory.text)}>
                               {employee.managerRating.toFixed(1)}
                             </span>
                             <div className="flex">

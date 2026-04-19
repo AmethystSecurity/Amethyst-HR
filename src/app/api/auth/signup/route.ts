@@ -98,12 +98,12 @@ export async function POST(request: Request) {
         employeeId: user.employeeId
       }
     })
-  } catch (error) {
+  } catch (error: any) {
     console.error('Signup error:', error)
-    return NextResponse.json(
-      { message: 'Internal server error' },
-      { status: 500 }
-    )
+    const message = process.env.NODE_ENV === 'production' 
+      ? 'Internal server error' 
+      : error.message || 'Internal server error'
+    return NextResponse.json({ message }, { status: 500 })
   }
 }
 

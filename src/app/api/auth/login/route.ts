@@ -65,11 +65,11 @@ export async function POST(request: Request) {
       },
       isAdmin: user.email === 'hradmin@gmail.com' || user.role === 'admin' || user.role === 'hr'
     })
-  } catch (error) {
+  } catch (error: any) {
     console.error('Login error:', error)
-    return NextResponse.json(
-      { message: 'Internal server error' },
-      { status: 500 }
-    )
+    const message = process.env.NODE_ENV === 'production'
+      ? 'Internal server error'
+      : error.message || 'Internal server error'
+    return NextResponse.json({ message }, { status: 500 })
   }
 }

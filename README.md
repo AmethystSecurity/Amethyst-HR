@@ -24,6 +24,18 @@ This immersive Framer Motion animation sets the tone for the entire experience.
 
 ---
 
+## 🎬 Demo Walkthrough
+
+![Amethyst HR Dashboard](public/amethyst-security.png)
+
+Watch the full navigation flow — from the interactive login through the admin dashboard, attendance, leave, payroll, and performance modules.
+
+[Watch Demo Video](./public/amethyst-demo.mp4) (29MB MP4)
+
+Or view the screenshots below to explore each module.
+
+---
+
 ## Features
 
 ### 🔐 Authentication & Authorization

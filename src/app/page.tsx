@@ -425,6 +425,45 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Demo Video Walkthrough */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold font-heading mb-4">
+                <span className="text-gradient">Demo Walkthrough</span>
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Watch the full navigation flow — from login to dashboard, attendance, leave, payroll, and performance.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative rounded-2xl overflow-hidden glass border border-border-glass shadow-2xl"
+            >
+              <video
+                controls
+                autoPlay={false}
+                className="w-full aspect-video"
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect fill='%230a0a0f' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239966CC' font-family='system-ui' font-size='48'%3ELoading demo...%3C/text%3E%3C/svg%3E"
+              >
+                <source src="/amethyst-demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-sm">
+                Amethyst HR Demo
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Admin Dashboard Preview */}
         <section className="py-20 px-6 bg-black/20">
           <div className="max-w-7xl mx-auto">

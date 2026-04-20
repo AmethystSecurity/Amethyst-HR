@@ -1,5 +1,7 @@
 # Amethyst HR
 
+![Amethyst HR Dashboard](amethyst-security.png)
+
 > Elegant, futuristic HR management system built with Next.js 14, TypeScript, and MongoDB.
 
 Amethyst HR is a comprehensive enterprise HR platform featuring an **interactive login experience with the Amethyst Lamp**, employee management, attendance tracking, payroll processing, leave management, and performance reviews — all wrapped in a premium dark theme with glassmorphism UI and smooth animations.
